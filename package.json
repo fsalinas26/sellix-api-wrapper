@@ -1,0 +1,30 @@
+{
+  "name": "sellix-api-wrapper",
+  "version": "1.0.0",
+  "description": "A NodeJS wrapper for the Sellix API",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": { },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fsalinas26/sellix-api-wrapper.git"
+  },
+  "keywords": [
+    "sellix",
+    "sellix.io",
+    "sellix api",
+    "sellix admin api",
+    "sellix nodejs wrapper"
+  ],
+  "author": "fsalinas26",
+  "license": "ISC",
+  "dependencies": {
+    "axios":"^0.21.1"
+  },
+  "bugs": {
+    "url": "https://github.com/fsalinas26/sellix-api-wrapper/issues"
+  },
+  "homepage": "https://github.com/fsalinas26/sellix-api-wrapper#readme"
+}
