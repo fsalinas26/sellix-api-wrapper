@@ -43,8 +43,7 @@ Fetches a specific product by ID.
 Creates a product with the given fields. Use custom_fields to declare non-required arguments.  
 [See Sellix Documentation on Product Arguments](https://developers.sellix.io/documentation#product-create)
 ```ruby
-API.createProduct("Product Title","New Product Desc",10.99,["STRIPE","BITCOIN"],"serials",0.0,{"crypto_confirmations_needed":2,"delivery_text":"Enjoy your product"}).then(
-res=>{
+API.createProduct("Product Title","New Product Desc",10.99,["STRIPE","BITCOIN"],"serials",0.0,{"crypto_confirmations_needed":2,"delivery_text":"Enjoy your product"}).then(res=>{
 console.log(res);
 });
 ```
@@ -53,8 +52,7 @@ console.log(res);
 Edits a specific product by ID. Use custom_fields to declare the fields to edit.  
 [See Sellix Documentation on Product Arguments](https://developers.sellix.io/documentation#product-edit)
 ```ruby
-API.editProduct("95619023",{"Title":"New Title","Price":25.99,"Serials":["AU9103PQE","GQOU3QLWE"]}).then(
-res=>{
+API.editProduct("95619023",{"Title":"New Title","Price":25.99,"Serials":["AU9103PQE","GQOU3QLWE"]}).then(res=>{
 console.log(res);
 })
 ```
