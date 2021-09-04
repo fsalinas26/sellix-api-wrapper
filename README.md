@@ -81,8 +81,7 @@ Fetches all coupons from your shop.
 Fetches a specific coupon by ID.
 
 ### createCoupon(code, discount_value, max_uses, products_bound)
-Creates a coupon with the given fields. Use custom_fields to declare non-required arguments.  
-[See Sellix Documentation on Coupon Arguments](https://developers.sellix.io/documentation#coupon-create)
+Creates a coupon with the given fields.
 ```ruby
 API.createCoupon("COUPON15",15,-1,{"695841804","695841805"}).then(res=>{
   console.log(res);
