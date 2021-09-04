@@ -5,6 +5,8 @@ A complete NodeJS wrapper for the Sellix API.
 The purpose of this wrapper is to easily implement the Sellix API into your project and retrieve realtime data about your shop. 
 ## Requirements
 In order to utilize the API calls, you need your API KEY from your shop. Visit settings->security and copy your API Key.
+## Installation
+npm -i sellix-api-wrapper
 ## Usage
 ```ruby
 const Sellix = require('sellix-api-wrapper`);
