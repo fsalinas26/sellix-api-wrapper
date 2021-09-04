@@ -1,7 +1,7 @@
 # sellix-api-wrapper
 A complete NodeJS wrapper for the Sellix.io API.
 <p align="center">
-  <img src="https://i.gyazo.com/99ba2425a9bb5c2c4d0900c29e25c94e.jpg">
+  <img src="https://i.gyazo.com/b67f3a75108799e042128fb57269e651.jpg">
 </p>
 
 ## Description 
