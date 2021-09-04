@@ -16,6 +16,10 @@ API.getAllOrders().then(res=>{
   console.log(res);
 });
 
+API.createCoupon("COUPON15OFF",15,-1,{"69571749194","695317319"}).then(res=>{
+  console.log(res);
+});
+
 API.editProduct("65918210438",{"Serials":["L1IELQ5","39131031"]}).then(res=>{
   console.log(res);
 });
