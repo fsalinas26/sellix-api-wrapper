@@ -1,6 +1,6 @@
 {
   "name": "sellix-api-wrapper",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A Complete NodeJS wrapper for the Sellix API",
   "main": "index.js",
   "directories": {
