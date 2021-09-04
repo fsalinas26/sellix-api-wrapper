@@ -13,7 +13,7 @@ npm i sellix-api-wrapper
 ## Usage
 ```ruby
 const Sellix = require('sellix-api-wrapper`);
-const API = new Sellix.API('YOUR_API_KEY')
+const API = new Sellix.API('YOUR_API_KEY`)
 
 API.getAllOrders().then(res=>{
   console.log(res);
