@@ -30,12 +30,14 @@ API.editProduct("65918210438",{"Serials":["L1IELQ5","39131031"]}).then(res=>{
 ```
 
 # API Endpoints
+## Orders
 ### getAllOrders()
 Fetches all orders from your shop.
 
 ### getOrder(id)
 Fetches a specific order by ID.
 
+## Products
 ### getAllProducts()
 Fetches all products from your shop.
 
@@ -62,6 +64,7 @@ console.log(res);
 ### deleteProduct(id)
 Deletes a specific product by ID.
 
+## Queries
 ### getAllQueries()
 Fetches all queries from your shop.
 
@@ -77,6 +80,7 @@ Closes a specific query by ID.
 ### reopenQuery(id)
 Reopens a specific query by ID.
 
+## Coupons
 ### getAllCoupons()
 Fetches all coupons from your shop.
 
@@ -102,17 +106,42 @@ API.editCoupon("6132a72303151",{"code":"COUPON5","discount_value":5,"max_uses":5
 
 ### deleteCoupon(id)
 Deletes a specific coupon by ID. 
-
+## Feedback
 ### getAllFeedback()
-Fetches all feedback from your shop.
+Fetches all feedback sorted by creation date.
 
 ### getFeedback(id)
 Fetches a specific feedback by ID.
 
 ### replyFeedback(id, reply)
 Replies to a specific feedback by ID. 
+
+## Blacklist
+### getAllBlacklist()
+Fetches all blacklist sorted by creation date.
+
+### getBlacklist(id)
+Fetches a specific blacklist by ID.
+
+### createBlacklist(type, data, note)
+Creates a blacklist using the given fields. Type must be 'email', 'ip', or 'country'. Data is blocked data. Note is optional.  
+```ruby
+API.createBlacklist("email","fakeCustomer@gmail.com","Banned from shop").then(res=>{
+  console.log(res);
+});
+```
+### updateBlacklist(id, type, data, note)
+Updates a specific blacklist by ID. See above for arguments.  
+```ruby
+API.updateBlacklist("6a5bc134f4","ip","273.314.1.31").then(res=>{
+  console.log(res);
+});
+```
+
+### deleteBlacklist(id)
+Deletes a specific blacklist by ID.
  
-## WIP
+## Payments (WIP)
 ### createPayment(title, product_id, quantity, gateway, value, confirmations, email, custom_fields)
 Creates a payment with the given fields. Use custom_fields to declare non-required arguments.  
 [Visit Sellix Documentation on Creating Payments](https://developers.sellix.io/documentation#sellix-checkout)
