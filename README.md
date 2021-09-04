@@ -6,7 +6,7 @@ The purpose of this wrapper is to easily implement the Sellix API into your proj
 ## Requirements
 In order to utilize the API calls, you need your API KEY from your shop. Visit settings->security and copy your API Key.
 ## Installation
-npm -i sellix-api-wrapper
+**npm -i sellix-api-wrapper**
 ## Usage
 ```ruby
 const Sellix = require('sellix-api-wrapper`);
@@ -82,13 +82,23 @@ Fetches all coupons from your shop.
 ### getCoupon(id)
 Fetches a specific coupon by ID.
 
-### createCoupon(code, discount_value, max_uses, products_bound, custom_fields)
+### createCoupon(code, discount_value, max_uses, products_bound)
 Creates a coupon with the given fields. Use custom_fields to declare non-required arguments.  
 [See Sellix Documentation on Coupon Arguments](https://developers.sellix.io/documentation#coupon-create)
+```ruby
+API.createCoupon("COUPON15",15,-1,{"695841804","695841805"}).then(res=>{
+  console.log(res);
+});
+```
 
 ### editCoupon(id, custom_fields)
 Edits a coupon by ID. Use custom_fields to declare fields to edit.  
 [See Sellix Documentation on Coupon Arguments](https://developers.sellix.io/documentation#coupon-edit)
+```ruby
+API.editCoupon("6132a72303151",{"code":"COUPON5","discount_value":5,"max_uses":5}).then(res=>{
+  console.log(res);
+});
+```
 
 ### deleteCoupon(id)
 Deletes a specific coupon by ID. 
@@ -102,6 +112,7 @@ Fetches a specific feedback by ID.
 ### replyFeedback(id, reply)
 Replies to a specific feedback by ID. 
  
+## WIP
 ### createPayment(title, product_id, quantity, gateway, value, confirmations, email, custom_fields)
 Creates a payment with the given fields. Use custom_fields to declare non-required arguments.  
 [Visit Sellix Documentation on Creating Payments](https://developers.sellix.io/documentation#sellix-checkout)
