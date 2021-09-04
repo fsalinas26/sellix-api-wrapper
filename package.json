@@ -1,12 +1,12 @@
 {
   "name": "sellix-api-wrapper",
-  "version": "1.0.0",
-  "description": "A NodeJS wrapper for the Sellix API",
+  "version": "1.0.1",
+  "description": "A Complete NodeJS wrapper for the Sellix API",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
-  "scripts": { },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fsalinas26/sellix-api-wrapper.git"
