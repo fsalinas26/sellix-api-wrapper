@@ -6,7 +6,7 @@ The purpose of this wrapper is to easily implement the Sellix API into your proj
 ## Requirements
 In order to use the API calls, you need your API Key from the Sellix.io website. Find your key on the [security](https://dashboard.sellix.io/settings/security) page.
 ## Installation
-**npm install sellix-api-wrapper**
+npm i sellix-api-wrapper
 ## Usage
 ```ruby
 const Sellix = require('sellix-api-wrapper`);
