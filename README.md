@@ -23,7 +23,7 @@ API.createCoupon("COUPON15OFF",15,-1,{"69571749194","695317319"}).then(res=>{
   console.log(res);
 });
 
-API.editProduct("65918210438",{"Serials":["L1IELQ5","39131031"]}).then(res=>{
+API.editProduct("demo65ab9133",{"Serials":["L1IELQ5","39131031"]}).then(res=>{
   console.log(res);
 });
 
@@ -32,14 +32,14 @@ API.editProduct("65918210438",{"Serials":["L1IELQ5","39131031"]}).then(res=>{
 # API Endpoints
 ## Orders
 ### getAllOrders()
-Fetches all orders from your shop.
+Fetches all orders sorted by creation date.
 
 ### getOrder(id)
 Fetches a specific order by ID.
 
 ## Products
 ### getAllProducts()
-Fetches all products from your shop.
+Fetches all products sorted by creation date.
 
 ### getProduct(id)
 Fetches a specific product by ID.
@@ -66,13 +66,18 @@ Deletes a specific product by ID.
 
 ## Queries
 ### getAllQueries()
-Fetches all queries from your shop.
+Fetches all queries sorted by creation date.
 
 ### getQuery(id)
 Fetches a specific query by ID.
 
 ### replyQuery(id, reply)
 Replies to a specific query by ID.
+```ruby
+API.replyQuery("demo2ab29431","Have you tried reinstalling?").then(res=>{
+  console.log(res);
+});
+```
 
 ### closeQuery(id)
 Closes a specific query by ID.
@@ -82,7 +87,7 @@ Reopens a specific query by ID.
 
 ## Coupons
 ### getAllCoupons()
-Fetches all coupons from your shop.
+Fetches all coupons sorted by creation date.
 
 ### getCoupon(id)
 Fetches a specific coupon by ID.
@@ -99,7 +104,7 @@ API.createCoupon("COUPON15",15,-1,{"695841804","695841805"}).then(res=>{
 Edits a coupon by ID. Use custom_fields to declare the arguments to edit.  
 [See Sellix Documentation on Coupon Arguments](https://developers.sellix.io/documentation#coupon-edit)
 ```ruby
-API.editCoupon("6132a72303151",{"code":"COUPON5","discount_value":5,"max_uses":5}).then(res=>{
+API.editCoupon("demo6a3b178",{"code":"COUPON5","discount_value":5,"max_uses":5}).then(res=>{
   console.log(res);
 });
 ```
@@ -115,6 +120,11 @@ Fetches a specific feedback by ID.
 
 ### replyFeedback(id, reply)
 Replies to a specific feedback by ID. 
+```ruby
+API.replyFeedback("demo1a83b7","Thanks for the feedback!").then(res=>{
+  console.log(res);
+});
+```
 
 ## Blacklist
 ### getAllBlacklist()
@@ -126,14 +136,14 @@ Fetches a specific blacklist by ID.
 ### createBlacklist(type, data, note)
 Creates a blacklist using the given fields. Type must be 'email', 'ip', or 'country'. Data is blocked data. Note is optional.  
 ```ruby
-API.createBlacklist("email","fakeCustomer@gmail.com","Banned from shop").then(res=>{
+API.createBlacklist("email","demoCustomer@gmail.com","Banned from shop").then(res=>{
   console.log(res);
 });
 ```
 ### updateBlacklist(id, type, data, note)
 Updates a specific blacklist by ID. See above for arguments.  
 ```ruby
-API.updateBlacklist("6a5bc134f4","ip","273.314.1.31").then(res=>{
+API.updateBlacklist("demo6abc1f4","ip","273.314.1.31").then(res=>{
   console.log(res);
 });
 ```
