@@ -2,7 +2,7 @@
 A complete NodeJS wrapper for the Sellix API.
 
 ## Description 
-The purpose of this wrapper is to easily implement the Sellix API into your project and retrieve realtime data about your shop,restock and modify your products, view and reply to queries, and more.
+The purpose of this wrapper is to easily implement the Sellix API into your project and retrieve realtime data about your shop, restock and modify your products, view and reply to queries, and more.
 ## Requirements
 In order to use the API calls, you need your API Key from the Sellix.io website. Find your key on the [Security](https://dashboard.sellix.io/settings/security) page.
 ## Installation
