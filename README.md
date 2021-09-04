@@ -1,5 +1,8 @@
 # sellix-api-wrapper
 A complete NodeJS wrapper for the Sellix.io API.
+<p align="center">
+  <img width="500" height="143" src="https://i.gyazo.com/5bdd835c465e524d935b8c241ce464d5.jpg">
+</p>
 
 ## Description 
 The purpose of this wrapper is to easily implement the Sellix API into your project and retrieve realtime data about your shop, restock and modify your products, view and reply to queries, and more.
