@@ -52,7 +52,7 @@ console.log(res);
 ```
 
 ### editProduct(id, custom_fields)
-Edits a specific product by ID. Use custom_fields to declare the fields to edit.  
+Edits a specific product by ID. Use custom_fields to declare the arguments to edit.  
 [See Sellix Documentation on Product Arguments](https://developers.sellix.io/documentation#product-edit)
 ```ruby
 API.editProduct("95619023",{"Title":"New Title","Price":25.99,"Serials":["AU9103PQE","GQOU3QLWE"]}).then(res=>{
@@ -92,7 +92,7 @@ API.createCoupon("COUPON15",15,-1,{"695841804","695841805"}).then(res=>{
 ```
 
 ### editCoupon(id, custom_fields)
-Edits a coupon by ID. Use custom_fields to declare fields to edit.  
+Edits a coupon by ID. Use custom_fields to declare the arguments to edit.  
 [See Sellix Documentation on Coupon Arguments](https://developers.sellix.io/documentation#coupon-edit)
 ```ruby
 API.editCoupon("6132a72303151",{"code":"COUPON5","discount_value":5,"max_uses":5}).then(res=>{
