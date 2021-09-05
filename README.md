@@ -12,7 +12,7 @@ In order to use the API calls, you need your API Key from the Sellix.io website.
 npm i sellix-api-wrapper
 ## Usage
 ```javascript
-const Sellix = require('sellix-api-wrapper`);
+const Sellix = require('sellix-api-wrapper');
 const API = new Sellix.API('YOUR_API_KEY')
 
 API.getAllOrders().then(res=>{
