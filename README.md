@@ -11,7 +11,7 @@ In order to use the API calls, you need your API Key from the Sellix.io website.
 ## Installation
 npm i sellix-api-wrapper
 ## Usage
-```ruby
+```javascript
 const Sellix = require('sellix-api-wrapper`);
 const API = new Sellix.API('YOUR_API_KEY')
 
@@ -47,7 +47,7 @@ Fetches a specific product by ID.
 ### createProduct(title, description, price, gateways, type, discount_value, custom_fields)
 Creates a product with the given fields. Use custom_fields to declare non-required arguments.  
 [See Sellix Documentation on Product Arguments](https://developers.sellix.io/documentation#product-create)
-```ruby
+```javascript
 API.createProduct("Product Title","New Product Desc",10.99,["STRIPE","BITCOIN"],"serials",0.0,{"crypto_confirmations_needed":2,"delivery_text":"Enjoy your product"}).then(res=>{
 console.log(res);
 });
@@ -56,7 +56,7 @@ console.log(res);
 ### editProduct(id, custom_fields)
 Edits a specific product by ID. Use custom_fields to declare the arguments to edit.  
 [See Sellix Documentation on Product Arguments](https://developers.sellix.io/documentation#product-edit)
-```ruby
+```javascript
 API.editProduct("95619023",{"Title":"New Title","Price":25.99,"Serials":["AU9103PQE","GQOU3QLWE"]}).then(res=>{
 console.log(res);
 })
@@ -94,7 +94,7 @@ Fetches a specific coupon by ID.
 
 ### createCoupon(code, discount_value, max_uses, products_bound)
 Creates a coupon with the given fields.
-```ruby
+```javascript
 API.createCoupon("COUPON15",15,-1,{"695841804","695841805"}).then(res=>{
   console.log(res);
 });
@@ -103,7 +103,7 @@ API.createCoupon("COUPON15",15,-1,{"695841804","695841805"}).then(res=>{
 ### editCoupon(id, custom_fields)
 Edits a coupon by ID. Use custom_fields to declare the arguments to edit.  
 [See Sellix Documentation on Coupon Arguments](https://developers.sellix.io/documentation#coupon-edit)
-```ruby
+```javascript
 API.editCoupon("demo6a3b178",{"code":"COUPON5","discount_value":5,"max_uses":5}).then(res=>{
   console.log(res);
 });
@@ -120,7 +120,7 @@ Fetches a specific feedback by ID.
 
 ### replyFeedback(id, reply)
 Replies to a specific feedback by ID. 
-```ruby
+```javascript
 API.replyFeedback("demo1a83b7","Thanks for the feedback!").then(res=>{
   console.log(res);
 });
@@ -135,14 +135,14 @@ Fetches a specific blacklist by ID.
 
 ### createBlacklist(type, data, note)
 Creates a blacklist using the given fields. Type must be 'email', 'ip', or 'country'. Data is blocked data. Note is optional.  
-```ruby
+```javascript
 API.createBlacklist("email","demoCustomer@gmail.com","Banned from shop").then(res=>{
   console.log(res);
 });
 ```
 ### updateBlacklist(id, type, data, note)
 Updates a specific blacklist by ID. See above for arguments.  
-```ruby
+```javascript
 API.updateBlacklist("demo6abc1f4","ip","273.314.1.31").then(res=>{
   console.log(res);
 });
