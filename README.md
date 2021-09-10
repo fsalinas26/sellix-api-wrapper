@@ -46,16 +46,16 @@ Fetches a specific product by ID.
 
 ### createProduct(title, description, price, gateways, type, discount_value, fields)
 Creates a product with the given fields. Use fields to declare non-required fields.  
-[See Sellix Documentation on Product Arguments](https://developers.sellix.io/documentation#product-create)
+[See Sellix Documentation on Product Fields](https://developers.sellix.io/documentation#product-create)
 ```javascript
 API.createProduct("Product Title","New Product Desc",10.99,["STRIPE","BITCOIN"],"serials",0.0,{"crypto_confirmations_needed":2,"delivery_text":"Enjoy your product"}).then(res=>{
 console.log(res);
 });
 ```
 
-### editProduct(id, custom_fields)
+### editProduct(id, fields)
 Edits a specific product by ID. Use fields to declare the fields to edit.  
-[See Sellix Documentation on Product Arguments](https://developers.sellix.io/documentation#product-edit)
+[See Sellix Documentation on Product Fields](https://developers.sellix.io/documentation#product-edit)
 ```javascript
 API.editProduct("95619023",{"Title":"New Title","Price":25.99,"Serials":["AU9103PQE","GQOU3QLWE"]}).then(res=>{
 console.log(res);
@@ -102,7 +102,7 @@ API.createCoupon("COUPON15",15,-1,{"695841804","695841805"}).then(res=>{
 
 ### editCoupon(id, fields)
 Edits a coupon by ID. Use fields to declare the fields to edit.  
-[See Sellix Documentation on Coupon Arguments](https://developers.sellix.io/documentation#coupon-edit)
+[See Sellix Documentation on Coupon Fields](https://developers.sellix.io/documentation#coupon-edit)
 ```javascript
 API.editCoupon("demo6a3b178",{"code":"COUPON5","discount_value":5,"max_uses":5}).then(res=>{
   console.log(res);
@@ -141,7 +141,7 @@ API.createBlacklist("email","demoCustomer@gmail.com","Banned from shop").then(re
 });
 ```
 ### updateBlacklist(id, type, data, note)
-Updates a specific blacklist by ID. See above for arguments.  
+Updates a specific blacklist by ID. See above for fields.  
 ```javascript
 API.updateBlacklist("demo6abc1f4","ip","273.314.1.31").then(res=>{
   console.log(res);
@@ -153,7 +153,7 @@ Deletes a specific blacklist by ID.
  
 ## Payments (WIP) not yet supported
 ### createPayment(title, product_id, quantity, gateway, value, confirmations, email, fields)
-Creates a payment with the given fields. Use custom_fields to declare non-required arguments.  
+Creates a payment with the given fields. Use custom_fields to declare non-required fields.    
 [Visit Sellix Documentation on Creating Payments](https://developers.sellix.io/documentation#sellix-checkout)
 
 ### deletePayment(id)
